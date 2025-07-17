@@ -1,72 +1,70 @@
 # Spam Detector (Python + PyQt6)
 
-Aplikacja z graficznym interfejsem. Model uczy się na danych, samodzielnie klasyfikując wiadomości jako SPAM lub NIE-SPAM
+An application with a graphical interface. The model is trained on data and automatically classifies messages as SPAM or NOT SPAM.
 
 ---
 
-## Wykorzystane technologie:
-- Python 3.x
-- PyQt6 (GUI)
-- scikit-learn (model klasyfikujący)
-- pandas & numpy (przetwarzanie danych)
+## Technologies used:
+- Python 3.x  
+- PyQt6 (GUI)  
+- scikit-learn (classification model)  
+- pandas & numpy (data processing)
 
 ---
 
-## Interfejs:
-GUI zbudowane w Qt Designer, zawiera:
-- Pole do wpisywania wiadomości
-- Przycisk **„Sprawdź”**
-- Informację czy wiadomość to SPAM
-- Przycisk **Resetuj** do czyszczenia pola tekstowego
+## Interface:
+GUI built with Qt Designer, includes:
+- Input field for the message  
+- **"Check"** button  
+- Information whether the message is SPAM  
+- **"Reset"** button to clear the input
 
 ---
 
-
-### Wymagania:
-- Python 3.12
-- PyQt6 6.9.1
-- scikit-learn 1.7.0
-- pandas 2.3.1
+### Requirements:
+- Python 3.12  
+- PyQt6 6.9.1  
+- scikit-learn 1.7.0  
+- pandas 2.3.1  
 - numpy 2.3.1
-
-
+- langdetect 1.0.9
 ---
 
-### Instalacja:
+### Installation:
 
-1. Pobierz projekt
+1. Download the project
 
-2. Zainstaluj niezbędne biblioteki:
+2. Install required libraries:
 ```bash
 pip install -r requirements.txt
 ```
 
 ---
 
+### How to run?
 
-### Jak uruchomić?
-Soposób 1 - za pomocą pliku **spam_detector_run.bat** uruchamianego graficznie
+**Option 1** – using the graphical launcher:  
+Run the file **`spam_detector_run.bat`**
 
 ![run_presentation](img/run_presentation.png)
 
-Sposób 2 (alternatywnie) – za pomocą konsoli i pliku main.py:
-```
+**Option 2** – via terminal:
+```bash
 python main.py
 ```
 
 ---
 
+## Requirements analysis:
 
-## Analiza wymagań:
+### 1. Functional requirements:
 
-### 1. Wymagania funkcjonalne 
+- The application allows the user to enter a text message  
+- The user can check whether the message is spam  
+- The system warns if the message is not in English
 
-- Aplikacja umożliwia wpisanie wiadomości tekstowej.
-- Użytkownik może sprawdzić, czy wiadomość jest spamem.
-- System ostrzega, jeśli wiadomość nie jest w języku angielskim.
+### 2. Non-functional requirements:
 
-### 2. Wymagania niefunkcjonalne
-
-- Szybkość działania (wynik w czasie rzeczywistym)
-- Intuicyjny interfejs
-- Przenośność między systemami (Windows, macOS – z odpowiednią konfiguracją)
+- Fast operation (real-time response)  
+- Intuitive interface  
+- Portability between systems (Windows, macOS – with proper configuration)
