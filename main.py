@@ -13,7 +13,7 @@ class SpamApp(QtWidgets.QMainWindow):
         # Połączenie przycisku sprawdź oraz reset z funkcją
         self.ui.check_btn.clicked.connect(self.check_message)
         self.ui.reset_btn.clicked.connect(self.erease_field)
-
+        self.ui.type_text.returnPressed.connect(self.check_message)
     def check_message(self):
         text = self.ui.type_text.text().strip()
 

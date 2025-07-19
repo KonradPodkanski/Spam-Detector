@@ -29,7 +29,5 @@ def train_and_predict(text):
 
     model.fit(X, y)
 
-    # DEBUG – sprawdzenie modelu na znanym przykładzie
-    # print("DEBUG test:", model.predict(["Click here for your prize"])[0])
 
     return model.predict([text])[0]
